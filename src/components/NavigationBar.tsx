@@ -116,24 +116,117 @@ function NavigationBar() {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="lg:hidden mt-6 border-t border-white/10 pt-6 flex flex-col gap-5">
+     {isOpen && (
+  <div
+    className="
+      lg:hidden
+      mt-4
+      p-5
+      rounded-3xl
+      bg-[#030807]/95
+      backdrop-blur-3xl
+      border border-white/5
+      shadow-[0_20px_80px_rgba(0,0,0,0.85)]
+      flex flex-col gap-3
+      text-white
+      overflow-hidden
+      relative
+    "
+  >
 
-          <button onClick={() => scrollToSection("hero-section")} className={`hover:text-green-300 ${active === "hero-section" ? "text-green-300" : ""}`} >
-            Home
-          </button>
-          <button onClick={() => scrollToSection("explore")} className={`hover:text-green-300 ${active === "explore" ? "text-green-300" : ""}`} >
-            Explore
-          </button>
-          <button onClick={() => scrollToSection("about")} className={`hover:text-green-300 ${active === "about" ? "text-green-300" : ""}`} >
-            About
-          </button>
-          <button onClick={() => scrollToSection("footer")} className={`hover:text-green-300 ${active === "footer" ? "text-green-300" : ""}`} >
-            Contact
-          </button>
+    {/* glow effect */}
+    <div className="absolute inset-0 bg-linear-to-br from-green-500/5 via-transparent to-transparent pointer-events-none" />
 
-        </div>
-      )}
+    <button
+      onClick={() => scrollToSection("hero-section")}
+      className={`
+        relative z-10
+        text-left
+        px-5 py-4
+        rounded-2xl
+        font-medium
+        tracking-wide
+        transition-all duration-300
+        hover:bg-white/8
+        hover:text-green-300
+        ${
+          active === "hero-section"
+            ? "bg-green-400/12 text-green-300 border border-green-400/20"
+            : "text-gray-300"
+        }
+      `}
+    >
+      Home
+    </button>
+
+    <button
+      onClick={() => scrollToSection("explore")}
+      className={`
+        relative z-10
+        text-left
+        px-5 py-4
+        rounded-2xl
+        font-medium
+        tracking-wide
+        transition-all duration-300
+        hover:bg-white/8
+        hover:text-green-300
+        ${
+          active === "explore"
+            ? "bg-green-400/12 text-green-300 border border-green-400/20"
+            : "text-gray-300"
+        }
+      `}
+    >
+      Explore
+    </button>
+
+    <button
+      onClick={() => scrollToSection("about")}
+      className={`
+        relative z-10
+        text-left
+        px-5 py-4
+        rounded-2xl
+        font-medium
+        tracking-wide
+        transition-all duration-300
+        hover:bg-white/8
+        hover:text-green-300
+        ${
+          active === "about"
+            ? "bg-green-400/12 text-green-300 border border-green-400/20"
+            : "text-gray-300"
+        }
+      `}
+    >
+      About
+    </button>
+
+    <button
+      onClick={() => scrollToSection("footer")}
+      className={`
+        relative z-10
+        text-left
+        px-5 py-4
+        rounded-2xl
+        font-medium
+        tracking-wide
+        transition-all duration-300
+        hover:bg-white/8
+        hover:text-green-300
+        ${
+          active === "footer"
+            ? "bg-green-400/12 text-green-300 border border-green-400/20"
+            : "text-gray-300"
+        }
+      `}
+    >
+      Contact
+    </button>
+
+  </div>
+)}
     </nav>
   )
 }
