@@ -111,7 +111,7 @@ function NavigationBar() {
           {menu.map((item) => (
             <button
               key={item.name}
-              onClick={() => openNewTab(item.path)}
+              onClick={() => window.open(item.path, "_blank")}
               className="text-left text-gray-700 hover:text-blue-600"
             >
               {item.name}
