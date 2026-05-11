@@ -7,36 +7,41 @@ import AboutPage from "./components/AboutPage";
 import ServicesPage from "./components/ServicesPage";
 import NewsEventsPage from "./components/News&EventPage";
 import ProductsPage from "./components/ProductsPage";
+import ContactPage from "./components/ContactUsPage";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const alreadyLoaded = sessionStorage.getItem("loaded");
+    // loading screen eka first visit ekedi witharai show wenne
+    const alreadyLoaded = sessionStorage.getItem("site-loaded");
 
-    if (alreadyLoaded) {
-      setLoading(false);
+    if (!alreadyLoaded) {
+      setLoading(true);
     }
   }, []);
 
   const handleFinish = () => {
-    sessionStorage.setItem("loaded", "true");
+    sessionStorage.setItem("site-loaded", "true");
     setLoading(false);
   };
 
+  // FIRST LOAD ONLY
+  if (loading) {
+    return <LoadingScreen onFinish={handleFinish} />;
+  }
+
+  // NORMAL APP
   return (
     <BrowserRouter>
-      {loading && <LoadingScreen onFinish={handleFinish} />}
-
-      {!loading && (
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/news-events" element={<NewsEventsPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/news-events" element={<NewsEventsPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

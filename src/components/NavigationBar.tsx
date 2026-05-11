@@ -11,6 +11,7 @@ function NavigationBar() {
     { name: "Services", path: "/services" },
     { name: "News & Events", path: "/news-events" },
     { name: "Products", path: "/products" },
+    {name: "Contact", path: "/contact"}
   ]
 
   const openNewTab = (path: string | URL | undefined) => {

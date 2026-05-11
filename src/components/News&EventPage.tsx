@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import SecondNavigation from "./SecondNavigation";
 
 export default function NewsEventsPage() {
   const news = [
@@ -26,8 +27,10 @@ export default function NewsEventsPage() {
   const prev = () => setIndex((p) => (p - 1 + news.length) % news.length);
 
   return (
+    <>
+     <SecondNavigation></SecondNavigation>
     <section className="relative w-full bg-white overflow-hidden">
-
+        
       <div className="bg-linear-to-r from-blue-50 to-cyan-50 py-20 px-5 md:px-10 lg:px-20 text-center">
 
         <p className="text-xs md:text-sm uppercase tracking-[0.4em] text-blue-700 font-semibold">
@@ -128,5 +131,6 @@ export default function NewsEventsPage() {
 
       </div>
     </section>
+    </>
   );
 }

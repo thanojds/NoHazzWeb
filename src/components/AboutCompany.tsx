@@ -1,8 +1,11 @@
+import NavigationBar from "./NavigationBar"
 
 function AboutCompany() {
   return (
+    <>
+    <NavigationBar />
     <section className="relative w-full overflow-hidden py-20 px-5 md:px-10 lg:px-20 bg-linear-to-b from-white via-blue-50 to-white">
-
+      
     {/* Soft Background Glow */}
     <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
     <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-200/30 rounded-full blur-3xl"></div>
@@ -122,7 +125,7 @@ function AboutCompany() {
         </div>
     </div>
 </section>
-
+</>
   )
 }
 

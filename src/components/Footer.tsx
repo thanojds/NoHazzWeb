@@ -18,7 +18,23 @@ function Footer() {
   { name: "Services", link: "/services" },
   { name: "News & Events", link: "/news-events" },
   { name: "Products", link: "/products" },
+  {name: "Contact", link: "/contact" }
 ]
+
+const socials = [
+  {
+    icon: FaFacebookF,
+    link: "https://www.facebook.com/nohazlk",
+  },
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/yourpage",
+  },
+  {
+    icon: FaLinkedinIn,
+    link: "https://www.linkedin.com/company/yourpage",
+  },
+];
   return (
     <footer className="relative overflow-hidden bg-linear-to-b from-white via-blue-100 to-white text-gray-800 border-t border-gray-300 w-full">
 
@@ -193,19 +209,32 @@ function Footer() {
 
           {/* SOCIALS */}
           <div className="flex gap-3">
+  {socials.map((item, i) => {
+    const Icon = item.icon;
 
-            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center
-                hover:bg-blue-50 hover:border-blue-300 hover:-translate-y-1 transition"
-              >
-                <Icon className="text-blue-600" />
-              </a>
-            ))}
-
-          </div>
+    return (
+      <a
+        key={i}
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          w-10 h-10
+          rounded-full
+          bg-white
+          border border-gray-200
+          flex items-center justify-center
+          hover:bg-blue-50
+          hover:border-blue-300
+          hover:-translate-y-1
+          transition
+        "
+      >
+        <Icon className="text-blue-600" />
+      </a>
+    );
+  })}
+</div>
 
         </div>
 

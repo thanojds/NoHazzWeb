@@ -1,3 +1,5 @@
+import SecondNavigation from "./SecondNavigation";
+
 export default function Products() {
 
   const products = [
@@ -16,8 +18,10 @@ export default function Products() {
   ];
 
   return (
+    <>
+    <SecondNavigation></SecondNavigation>
     <section className="relative w-full py-24 px-5 md:px-10 lg:px-20 overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white">
-
+        
       {/* BACKGROUND GLOWS */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-300/20 rounded-full blur-3xl animate-pulse"></div>
@@ -103,5 +107,6 @@ export default function Products() {
       </div>
 
     </section>
+    </>
   );
 }

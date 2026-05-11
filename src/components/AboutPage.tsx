@@ -1,11 +1,16 @@
+import SecondNavigation from "./SecondNavigation";
+
 export default function AboutPage() {
   return (
+    <>
+      <SecondNavigation></SecondNavigation>
     <div className="relative w-full bg-linear-to-b from-white via-blue-50 to-white overflow-hidden">
-
+        
       {/* BACKGROUND GLOWS */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-300/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-300/20 blur-3xl rounded-full"></div>
 
+        
       {/* HERO */}
       <section className="relative text-center py-24 px-5 md:px-10 lg:px-20">
 
@@ -120,5 +125,6 @@ export default function AboutPage() {
       </section>
 
     </div>
+    </>
   );
 }

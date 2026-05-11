@@ -1,4 +1,5 @@
 import { Sparkles, Leaf, ShieldCheck, Truck, Recycle, Headphones } from "lucide-react";
+import SecondNavigation from "./SecondNavigation";
 
 export default function ServicesSection() {
   const services = [
@@ -35,8 +36,10 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-24 px-5 md:px-10 lg:px-20 bg-gradient-to-b from-white via-blue-50 to-white">
-
+    <>
+     <SecondNavigation></SecondNavigation>
+    <section className="relative w-full overflow-hidden py-5 px-5 md:px-10 lg:px-20 bg-linear-to-b from-white via-blue-50 to-white">
+       
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-300/20 rounded-full blur-3xl"></div>
@@ -119,5 +122,6 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
