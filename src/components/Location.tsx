@@ -1,6 +1,6 @@
 export default function Location() {
   return (
-    <section className="relative w-full py-24 px-5 md:px-10 lg:px-20 bg-gradient-to-b from-white via-blue-50 to-white overflow-hidden">
+    <section className="relative w-full py-24 px-5 md:px-10 lg:px-20 bg-linear-to-b from-white via-blue-50 to-white overflow-hidden">
 
       {/* BACKGROUND GLOWS */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -27,7 +27,7 @@ export default function Location() {
         <div className="rounded-3xl overflow-hidden shadow-2xl border border-blue-100">
 
           <iframe
-            src="https://www.google.com/maps?q=Green+Panther+(Pvt)+Ltd,+Battaramulla&output=embed"            className="w-full h-[300px] sm:h-[400px] md:h-[500px]"
+            src="https://www.google.com/maps?q=Green+Panther+(Pvt)+Ltd,+Battaramulla&output=embed"  className="w-full h-75 sm:h-100 md:h-125"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

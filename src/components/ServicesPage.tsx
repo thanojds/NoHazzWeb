@@ -87,7 +87,7 @@ export default function ServicesSection() {
               <div className="
                 absolute inset-0 opacity-0
                 group-hover:opacity-100
-                bg-gradient-to-br from-blue-100/40 to-cyan-100/40
+                bg-linear-to-br from-blue-100/40 to-cyan-100/40
                 transition duration-500 rounded-3xl
               "></div>
 
@@ -96,7 +96,7 @@ export default function ServicesSection() {
                 relative w-14 h-14
                 flex items-center justify-center
                 rounded-2xl
-                bg-gradient-to-br from-blue-600 to-cyan-500
+                bg-linear-to-br from-blue-600 to-cyan-500
                 text-white
                 shadow-md
                 group-hover:scale-110

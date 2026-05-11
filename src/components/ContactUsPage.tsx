@@ -197,7 +197,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT SIDE FORM */}
-          <div className="bg-white/80 backdrop-blur-2xl border border-blue-100 rounded-[2rem] shadow-[0_20px_80px_rgba(37,99,235,0.08)] p-6 md:p-10">
+          <div className="bg-white/80 backdrop-blur-2xl border border-blue-100 rounded-4xl shadow-[0_20px_80px_rgba(37,99,235,0.08)] p-6 md:p-10">
 
             <form onSubmit={handleSubmit} className="space-y-6">
 

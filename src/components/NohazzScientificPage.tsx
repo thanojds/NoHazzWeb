@@ -54,7 +54,7 @@ export default function NohazzScientificSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-24 px-5 md:px-10 lg:px-20 bg-gradient-to-b from-white via-blue-50 to-white">
+    <section className="relative w-full overflow-hidden py-24 px-5 md:px-10 lg:px-20 bg-linear-to-b from-white via-blue-50 to-white">
 
       {/* BACKGROUND GLOWS */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -122,7 +122,7 @@ export default function NohazzScientificSection() {
                 <div className="
                   absolute inset-0 opacity-0
                   group-hover:opacity-100
-                  bg-gradient-to-br
+                  bg-linear-to-br
                   from-blue-100/40
                   to-cyan-100/40
                   transition-all duration-500
@@ -136,7 +136,7 @@ export default function NohazzScientificSection() {
                       min-w-14
                       h-14
                       rounded-2xl
-                      bg-gradient-to-br
+                      bg-linear-to-br
                       from-blue-600
                       to-cyan-500
                       flex
@@ -206,7 +206,7 @@ export default function NohazzScientificSection() {
 
                       ${
                         activeStep === i
-                          ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-blue-300 shadow-[0_0_40px_rgba(59,130,246,0.35)] scale-105"
+                          ? "bg-linear-to-r from-blue-600 to-cyan-500 text-white border-blue-300 shadow-[0_0_40px_rgba(59,130,246,0.35)] scale-105"
                           : "bg-white/80 text-gray-700 border-blue-100"
                       }
                     `}
@@ -254,13 +254,13 @@ export default function NohazzScientificSection() {
           <div
             className="
               inline-block
-              bg-gradient-to-r
+              bg-linear-to-r
               from-blue-600
               to-cyan-500
               text-white
               px-8 md:px-12
               py-6
-              rounded-[2rem]
+              rounded-4xl
               shadow-[0_20px_60px_rgba(37,99,235,0.2)]
               hover:scale-105
               transition-all
