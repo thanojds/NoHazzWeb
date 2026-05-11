@@ -11,6 +11,7 @@ import { useState } from "react";
 
 import Footer from "./Footer";
 import SecondNavigation from "./SecondNavigation";
+import Location from "./Location";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -271,6 +272,7 @@ export default function ContactPage() {
 
         </div>
       </section>
+        <Location />
 
       {/* FOOTER */}
       <Footer />

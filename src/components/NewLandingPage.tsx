@@ -128,10 +128,6 @@ function LandingPage() {
 <section>
     <NewsEvents />
 </section>
-
-<section>
-    <Location />
-</section>
          <Footer />
 </>
        
