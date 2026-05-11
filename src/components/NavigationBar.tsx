@@ -117,6 +117,21 @@ function NavigationBar() {
               {item.name}
             </button>
           ))}
+           <button className="
+            px-5 py-2 rounded-full
+            bg-green-600 text-white
+            hover:bg-green-700 transition
+          ">
+            Customer Portal
+          </button>
+
+          <button className="
+            px-5 py-2 rounded-full
+            bg-blue-600 text-white
+            hover:bg-blue-700 transition
+          ">
+            Admin Portal
+          </button>
 
         </div>
       )}
