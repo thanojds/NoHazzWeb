@@ -7,7 +7,6 @@ import AboutCompany from "./AboutCompany"
 import NohazzScientificSection from "./NohazzScientificPage"
 import NewsEvents from "./News&Events"
 import Products from "./Products"
-import Location from "./Location"
 import AboutDescription from "./AboutDescription"
 
 
